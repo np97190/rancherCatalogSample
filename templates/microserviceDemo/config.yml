@@ -1,8 +1,5 @@
----
-name: microservice Demo App
+name: microserviceDemoApp
 description: >
   A Demo java app.
 version: 0.0.1-rancher1
-category: java Apps
-license: Apache2
-projectURL: https://github.com/np97190/rancherCatalogSample
+category: "java Apps"

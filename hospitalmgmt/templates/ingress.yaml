@@ -1,12 +1,13 @@
-kind: Service
-apiVersion: v1
+apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
-  name: tomcat-web
+    name: tomcat-web
 spec:
-  selector:
-    app: tomcat-web
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  type: ClusterIP
+    rules:
+    - host: portal.hospitalmgmt.com
+      http:
+          paths:
+          - backend:
+               serviceName: tomcat-web
+               servicePort: 8080
+

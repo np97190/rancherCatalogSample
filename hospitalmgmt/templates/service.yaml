@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-web
+  namespace: default    # Kubernets namespace
+  labels:
+    app: tomcat-web
+    service: tomcat-web
+    env: nonprod
+spec:
+  selector:
+    app: tomcat-web
+    service: tomcat-web
+    env: nonprod
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
